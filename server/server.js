@@ -29,7 +29,8 @@ app.get('/logout', (req, res) => {
 })
 
 app.post('/courses/rounds', roundCtrl.create);
-app.get('/courses/rounds', roundCtrl.roundsData);
-app.put('/courses/rounds/:id', roundCtrl.edit);
-app.delete('/courses/rounds/:id', roundCtrl.delete);
+app.get('/courses/rounds/:course_id', roundCtrl.roundsData);
+app.put('/courses/rounds/:id/:course_id', roundCtrl.edit);
+app.delete('/courses/rounds/:id/:course_id', roundCtrl.delete);
 app.get('/courses', roundCtrl.getCourses);
+app.get('/courses/rounds', roundCtrl.getHandicap)

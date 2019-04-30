@@ -2,17 +2,20 @@ import styled from 'styled-components'
 
  export const Button = styled.button`
   background: none;
-  border-radius: 8px;
-  padding: ${props => (props.padding)};
+  border-radius: 0px;
   text-align: center;
   font-size: 25px;
   font-weight: 900;
   border-color: #008cba;
   font-family: 'Montserrat';
+  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 3px;
+  border: 8px outset rgb(28, 110, 164); 
+  display: inline-block;
   &:hover {
     color: whitesmoke;
-    background-color: #008cba9a;
-  }
+    background-color: #163a6399;
+  };
 `;
 export const A = styled.a`
   position: relative;

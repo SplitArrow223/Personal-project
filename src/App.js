@@ -4,7 +4,7 @@ import "./App.css";
 import Login from "./components/Login/Login";
 import Private from "./components/Private/Private";
 import About from './components/About';
-
+import Icon from './Minion-icon.png';
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       showLogin: false,
       showAbout: false,
-      showWelcome: true
+      showWelcome: true,
+      showMenu: false
     };
   }
 
@@ -35,9 +36,26 @@ class App extends Component {
                   <div className={this.state.showAbout ? 'about slide2' : 'about'} >
                      <About />
                   </div>
+                  <div className={this.state.showMenu ? 'menu menu-slide' : 'menu'}>
+                  <button className='menu-links' onClick={() => {
+                          this.setState({showLogin: !this.state.showLogin,
+                          showAbout: false, showMenu: false})
+                          }} >LOGIN</button>
+
+                        <button className="menu-links" onClick={() => {
+                          this.setState({showAbout: !this.state.showAbout,
+                          showLogin: false, showMenu: false})
+                          }} >ABOUT</button>
+                  </div>
                   <header>
-                  
-                    Golf Tracker
+                    <div className='icon' style={{
+                      display: 'flex', 
+                      flexDirection: 'row',
+                      alignItems: 'center'
+                    }} >
+                    <img className='img' src={Icon} alt="golf-ball" ></img>
+                    <h3>MinionGolf</h3> 
+                    </div>
                     <nav>
                       <div >
                         <button className='nav-links' onClick={() => {
@@ -49,6 +67,13 @@ class App extends Component {
                           this.setState({showAbout: !this.state.showAbout,
                           showLogin: false, showWelcome: false})
                           }} >ABOUT</button>
+                      </div>
+                      <div className='nav-icon'
+                      onClick={() => this.setState({
+                        showMenu:!this.state.showMenu,
+                        showWelcome: false
+                      }) }>
+                       <div></div>
                       </div>
                     </nav>
                   </header>
@@ -63,7 +88,10 @@ class App extends Component {
                     <h2>Click the login button located at the top to log in,  </h2>  
                     <h2>or create a new account!</h2>
                     </div>
-                  </div>    
+                  </div> 
+                  <footer>
+                    @ copywright
+                  </footer>   
                 </div>
 
               );
