@@ -7,6 +7,9 @@ import {getAllRounds, getAllCourses, addRound, removeRound, editRound, getHandic
 import { Button } from "../Button";
 import styled from "styled-components";
 import Courses from '../courses';
+require('dotenv').config();
+
+const {REACT_APP_LOGOUT} = process.env
 
 class Private extends Component {
   constructor(props) {
@@ -47,7 +50,7 @@ class Private extends Component {
               <button className='B'>Your Handicap: {handicap}</button>
             </div>
              <div className={this.state.showLogout ? 'logout logout-slide' : 'logout'} >
-              <a href="http://localhost:7200/logout">
+              <a href={REACT_APP_LOGOUT}>
                <button className='logout-btn'>Logout!</button>
               </a>
             </div>

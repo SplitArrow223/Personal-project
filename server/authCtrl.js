@@ -1,4 +1,6 @@
 const bcrypt = require('bcryptjs')
+require('dotenv').config();
+const {REACT_APP_REDIRECT} = process.env;
 
 module.exports = {
     register: async (req, res) => {
@@ -40,6 +42,10 @@ module.exports = {
           message: 'login successful',
           loggedIn: true
       })
+    },
+    logout:  (req, res) => {
+        req.session.destroy()
+        res.redirect(REACT_APP_REDIRECT)
     },
     userData(req, res) {
         if(req.session.user) res.status(200).send(req.session.user)
