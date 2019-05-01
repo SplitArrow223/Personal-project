@@ -16,6 +16,7 @@ class Login extends Component {
     async register() {
         const {username, email, password } = this.state;
         const res = await axios.post('/auth/register', {username, email, password } );
+        console.log(res)
         if (res.data.loggedIn) this.props.history.push('/private')
         else alert('registration failed')
             
@@ -29,11 +30,17 @@ class Login extends Component {
   render() {
     return (
       <Wrapper >
-        <h1 style={{textShadow: '5px 5px 5px rgb(16, 18, 141) ', color: 'darkgray'}} >Golfers Anonymous</h1>
+        <h1 style={{textShadow: '5px 5px 5px rgb(16, 18, 141) ', 
+             color: 'darkgray', 
+             letterSpacing: '3px',
+             position: 'relative',
+             top: '40px'}} >
+         GOLFERS ANONYMOUS  
+        </h1>
         <Input primary>
           <span>Username:</span>
-          <input onChange={(e) => this.setState({username: e.target.value })}
-           value={this.state.userName} 
+          <input onChange={(e) => this.setState({ username: e.target.value })}
+           value={this.state.username} 
            type="text" 
            placeholder='Input Username' />
         </Input>
@@ -65,10 +72,10 @@ class Login extends Component {
 export default withRouter(Login)
 
 const Input =  styled.p`
-  background-color: ${props => (props.primary ? '#163a6399' : '#998')};
+  background-color: ${props => (props.primary ? '#a8b6b6' : '#998')};
   font-weight: 700;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 350px;
   padding: 10px;
   font-size: 20px;
@@ -86,8 +93,8 @@ const Input =  styled.p`
     font-weight: 700;
     font-size: 18px;
     background: none;
-    color: whitesmoke;
-    border-bottom: 3px dashed whitesmoke;
+    color: #163a63;
+    border-bottom: 3px dashed #163a63;
   }
   @media(max-width: 600px) and (min-width: 250px) {
     width: 250px;
@@ -108,12 +115,11 @@ const Wrapper = styled.div`
   border: 8px outset rgb(38, 87, 161);
   box-shadow: 5px 5px 40px rgb(38, 87, 161);
   background-image: url('https://images.unsplash.com/photo-1544914379-806667cd9489?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
-
+  
 }
   Button {
     width:160px;
     margin: 5px 20px;
-    background-image: linear-gradient(to right, rgb(6, 48, 6) 0%, rgb(35, 136, 203) 50%, rgb(6, 48, 6) 100%); 
     &:hover {
       color: whitesmoke;
       background-color: #163a6399;

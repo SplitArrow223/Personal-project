@@ -6,6 +6,7 @@ import Private from "./components/Private/Private";
 import About from './components/About';
 import Icon from './Minion-icon.png';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -54,7 +55,18 @@ class App extends Component {
                       alignItems: 'center'
                     }} >
                     <img className='img' src={Icon} alt="golf-ball" ></img>
-                    <h3>MinionGolf</h3> 
+                    <h3 className='h3' >
+                      <span>M</span>
+                      <span>i</span>
+                      <span>n</span>
+                      <span>i</span>
+                      <span>o</span>
+                      <span>n</span>
+                      <span>G</span>
+                      <span>o</span>
+                      <span>l</span>
+                      <span>f</span>
+                    </h3> 
                     </div>
                     <nav>
                       <div >
@@ -79,10 +91,16 @@ class App extends Component {
                   </header>
                   
                   <div className={this.state.showWelcome ? 'welcome ' : 'welcome welcome-slide'}>
-                    <h1 style={{fontFamily: 'Kaushan Script',
-                                fontStyle: 'oblique',
-                                fontSize: '40px'
-                                }}>WELCOME!</h1>
+                    <h1 >
+                           <span>W</span>
+                           <span>E</span>
+                           <span>L</span>
+                           <span>C</span>
+                           <span>O</span>
+                           <span>M</span>
+                           <span>E</span>
+                           <span>!</span>
+                    </h1>
                     <div className='welcome-text'>
                     <h2>LETS GET STARTED !</h2>         
                     <h2>Click the login button located at the top to log in,  </h2>  

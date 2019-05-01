@@ -1,16 +1,17 @@
 .body {
   display: flex;
-  align-items: center;
-  justify-content: center;
   min-width: 350px;
   min-height: 100vh;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  background-color: rgb(223, 211, 211);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-attachment: fixed;
-  background-size: cover;
-  bottom: 0;
+}
+.golfPic {
+  width: 100vw;
+  min-width: 350px;
+  min-height: 100vh;
+  position: fixed;
+  
 }
 .header {
   position: fixed;
@@ -25,11 +26,21 @@
   align-items: center;
   justify-content: space-between;
   font-size: calc(20px + 3vmin);
-  color: rgb(245, 220, 220);
+  color: goldenrod;
   font-family: 'Kaushan Script';
   font-style: italic;
   font-weight: 400;
   border: 7px  solid #6d161b
+}
+.icon2 {
+  height: 75px;
+  background-color: goldenrod;
+  border-radius: 20px;
+  margin-right: 10px;
+  
+}
+.nav-links {
+  color: goldenrod
 }
 .nav-links:hover {
   color: whitesmoke;
@@ -54,11 +65,11 @@
 
 }
 .courses {
-  position: relative;
+  position: absolute;
   top: -600vh;
   margin-top: 1rem;
-  transition: 0s;
-
+  transition: 1s;
+   
 }
 .courses-slide {
   top: 0px;
@@ -181,6 +192,11 @@
 @media screen and (max-width: 950px) {
   .body {
     
+
+  }
+  .icon2 {
+    height: 60px;
+    margin-left: -18px;
   }
   .nav-icon2 {
     display: block;
@@ -193,5 +209,9 @@
     display: flex;
     
   }
+  .h3 {
+    font-size: 30px
+  }
+
   
 }

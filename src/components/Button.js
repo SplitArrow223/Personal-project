@@ -8,8 +8,8 @@ import styled from 'styled-components'
   font-weight: 900;
   border-color: #008cba;
   font-family: 'Montserrat';
-  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
-  box-shadow: rgb(0, 0, 0) 5px 5px 15px 3px;
+  background-color: #a8b6b6;
+   box-shadow: rgb(0, 0, 0) 5px 5px 15px 3px;
   border: 8px outset rgb(28, 110, 164); 
   display: inline-block;
   &:hover {

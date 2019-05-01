@@ -74,7 +74,7 @@ const Wrapper = styled.div`
   margin:20px;
   color: rgb(6, 48, 6);
   border-radius: 10px;
-  border: 18px groove rgb(6, 48, 6);
+  border: 14px groove rgb(6, 48, 6);
   box-shadow: 8px 8px 20px rgb(16, 18, 20);
   text-align: center;
   
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
     border-radius: 10px;
     margin: 0px 4px;
     box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
-    border: 11px outset rgb(28, 110, 164); 
+    border: 8px outset rgb(28, 110, 164); 
     display: inline-block;
     margin-bottom: -60px;
     &:hover {
@@ -111,7 +111,7 @@ const Wrapper = styled.div`
   }
   .golf-ball {
     position: absolute;
-    opacity: 0.4;
+    opacity: 0.3;
     width: 180px;
     
   }
@@ -126,7 +126,7 @@ const Display = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
+  background: none;
 `;
 const Btn = styled.button`
   color: #163a63;
@@ -139,7 +139,7 @@ const Btn = styled.button`
   border-radius: 10px;
   position: absolute;
   right: -8px;
-  top: -12px;
+  top: 145px;
   &:hover {
       color: rgb(173, 11, 11);
       background-color: #d3e0e0;

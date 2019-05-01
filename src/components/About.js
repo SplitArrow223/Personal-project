@@ -5,9 +5,22 @@ export default class About extends Component {
   render() {
     return (
       <Wrapper>
-        <h1 style={{fontSize: '45px'}} >About!</h1>
-        <h1>This is my pretty sweet project</h1>
-        
+       
+        <section>
+          <h1 style={{color: '#6d161b', marginTop: '80px'}}>
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+            <span>!</span>
+          </h1>
+        </section>
+        <h3 style={{fontSize: '40px'}} >This is my cool project!</h3>
+        <h3 style={{fontSize: '40px'}} >it's not much, but sure was fun to make</h3>
+       
       </Wrapper>
     )
   }
@@ -15,11 +28,14 @@ export default class About extends Component {
 const Wrapper = styled.div`
   width: 70vw;
   background-color: darkgray;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 55vh;
+  height: 60vh;
   border: 18px ridge #1C6EA4;
   box-shadow: 5px 5px 40px   rgb(16, 18, 20);
   color: #153b66;
+  font-family: 'Kaushan Script';
+  @media screen and (max-width: 950px) {
+  width: 90vw;
+  
+}
 `;
 

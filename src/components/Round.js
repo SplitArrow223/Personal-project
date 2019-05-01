@@ -57,6 +57,7 @@ const Wrapper = styled.div`
   border: 20px solid green;
   border-radius: 8px;
   border: 18px ridge #1C6EA4;
+  margin-top: 10rem;
   Button {
     width: 50%;
     padding: 10px;

@@ -7,6 +7,8 @@ import {getAllRounds, getAllCourses, addRound, removeRound, editRound, getHandic
 import { Button } from "../Button";
 import styled from "styled-components";
 import Courses from '../courses';
+import GolfIcon from '../../Golf-icon.png';
+import golfPic from '../../golf-pic.jpg'
 require('dotenv').config();
 
 const {REACT_APP_LOGOUT} = process.env
@@ -17,7 +19,7 @@ class Private extends Component {
 
     this.state = {
       showHandicap: false,
-      showCourses: false,
+      showCourses: true,
       showLogout: false,
       showMenu: false
     };
@@ -34,6 +36,7 @@ class Private extends Component {
     const {handicap} = this.props.course;
     return (
       <Wrapper>
+        <img className='golfPic' src={golfPic} alt=""/>
         <div className="body">
            <div className={this.state.showCourses ? 'courses courses-slide' : 'courses'}>
               <Courses courses={this.props.course.courses}
@@ -76,7 +79,23 @@ class Private extends Component {
                 </button>
             </div>
           <header className="header">
-            Hello {username}! 
+            <div className='gIcon' style={{
+                      display: 'flex', 
+                      flexDirection: 'row',
+                      alignItems: 'center'
+                    }} >
+              <img className='icon2' src={GolfIcon} alt="golf icon"/>
+             <h3 className='h3' > 
+               <span>H</span>
+               <span>e</span>
+               <span>l</span>
+               <span>l</span>
+               <span>o </span>
+               <span> _ {username}</span>
+               <span>!</span>
+              
+             </h3>
+            </div>
             <nav >
               <button className="nav-links"
                 onClick={() => this.setState({showCourses: !this.state.showCourses})}
@@ -109,12 +128,12 @@ class Private extends Component {
             <> 
             </>
           ) : (
-            <alert>
+            <section>
               <h1>Please log in!</h1>
               <Link to="/">
                 <Button padding="15px 70px">Login</Button>
               </Link>
-            </alert>
+            </section>
           )}
         </div>
         
@@ -130,13 +149,14 @@ export default connect(
 )(Private);
 
 const Wrapper = styled.div`
+ 
   nav {
     margin-right: 2em;
   }
   p {
     margin-left: 1em;
   }
-  alert {
+  section {
     background-color: whitesmoke;
     position: fixed;
     top: 8em;

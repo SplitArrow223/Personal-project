@@ -6,7 +6,7 @@ module.exports = {
     register: async (req, res) => {
         const {username, email, password} = req.body;
         const db = req.app.get('db');
-        const accArr = await db.find_acc_by_email([email])
+        const accArr = await db.find_acc_by_email([username, email])
         if (accArr[0]){
             return res.status(200).send({message: 'Email already in use'})
         }
