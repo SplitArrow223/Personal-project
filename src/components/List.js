@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import swal from 'sweetalert';
+import Golf from './../Golf-Ball-icon.png';
 
 export default class List extends Component {
   constructor(props) {
@@ -21,8 +23,22 @@ export default class List extends Component {
         <Display>
           <h2>Score: {round.score}</h2>
           <h2>Date: {round.round_date}</h2>
+          <img className='golf-ball' src={Golf} alt="golf ball"></img>
           <div>
-          <button onClick={() => this.props.removeRound(round.round_id, round.course_id)}        style={{color: '#6d161b'}}  >delete</button>
+          <button onClick={() => { swal({
+            title: 'Are You Sure You Want To Remove This Round?',
+            text: 'If So Click "OK"!',
+            icon: 'warning',
+            buttons: true,
+            dangerMode: true,
+          }).then((willDelete) => {
+            if (willDelete) {
+              this.props.removeRound(round.round_id, round.course_id).then(
+                swal('Your Round Was Deleted', {icon: 'success'})
+              )
+              }else swal('Your Round Is Safe!')
+          })}} style={{color: '#6d161b'}}  >delete</button>
+          
           <button onClick={() => this.setState({edit: true, round: round.round_id, course: round.course_id})} style={{padding: '5px 28px', color: 'green'}} >edit</button>
           </div>
         </Display>
@@ -65,19 +81,23 @@ const Display = styled.div`
   align-items: center;
   justify-content: center;
   border: 14px ridge #1C6EA4;
+  color: #163a63;
+  border-radius: 5px;
+  
   button {
     background-color: #a8b6b6;
     border: none;
     color: #163a63;
     font-size: 20px;
+    font-weight: 600;
     padding: 5px 15px;
-    border: 3px solid #163a63;
     border-radius: 10px;
     margin: 0px 4px;
     box-shadow: rgb(0, 0, 0) 5px 5px 10px 5px;
     border: 8px outset rgb(28, 110, 164); 
     display: inline-block;
-    margin-bottom: -80px;
+    margin-bottom: -100px;
+    outline: none;
     &:hover {
       color: rgb(6, 48, 6));
       background-color: #d3e0e0;
@@ -90,6 +110,12 @@ const Display = styled.div`
     align-items: center;
     justify-content: space-between;
 
+  }
+  .golf-ball {
+    position: absolute;
+    opacity: 0.3;
+    width: 200px;
+    
   }
   @media (max-width: 600px) and (min-width: 250px) {
     width: 60vw;

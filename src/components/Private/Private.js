@@ -58,9 +58,10 @@ class Private extends Component {
               </a>
             </div>
             <div className={this.state.showMenu ? 'menu2 menu-slide2' : 'menu2'} >
-               <button className="menu2-links"
+               <button className="nav-links"
                 onClick={() => this.setState({showCourses: !this.state.showCourses})}
-                >Courses</button>
+                >Courses
+                </button>
               
                 <button className="menu2-links"
                   onClick={() => 
@@ -96,20 +97,49 @@ class Private extends Component {
               
              </h3>
             </div>
-            <nav >
+            <nav className='nav'>
               <button className="nav-links"
                 onClick={() => this.setState({showCourses: !this.state.showCourses})}
-              >Courses</button>
+              >
+              <div className='h3' >
+                  <span>C</span>
+                  <span>o</span>
+                  <span>u</span>
+                  <span>r</span>
+                  <span>s</span>
+                  <span>e</span>
+                  <span>s</span>
+                </div>
+              </button>
               
                 <button className="nav-links"
                   onClick={() => 
                    this.setState({
                     showHandicap: !this.state.showHandicap,  showLogout: false })}
-                >Handicap</button>
+                >
+                <div className='h3'>
+                  <span>H</span>
+                  <span>a</span>
+                  <span>n</span>
+                  <span>d</span>
+                  <span>i</span>
+                  <span>c</span>
+                  <span>a</span>
+                  <span>p</span>
+                </div>
+                </button>
              
                 <button className="nav-links" padding="15px"
                   onClick={() => this.setState({showLogout: !this.state.showLogout,  showHandicap: false})}
-                > Logout
+                > 
+                <div className='h3'>
+                  <span>L</span>
+                  <span>o</span>
+                  <span>g</span>
+                  <span>o</span>
+                  <span>u</span>
+                  <span>t</span>
+                </div>
                 </button>
                 <div className='nav-icon2'
                       onClick={() => this.setState({

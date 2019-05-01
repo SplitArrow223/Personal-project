@@ -37,14 +37,15 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 3vmin);
   background-color: #153b66ad;
-  color: whitesmoke;
+  color: goldenrod;
   font-family: 'Kaushan Script';
+  font-size: 25px;
 }
 .welcome {
   width: 60vw;
@@ -81,17 +82,93 @@ footer {
   background: none;
   border: none;
   font-size: 25px;
-  color: rgb(212, 199, 199);
   margin-right: 5rem;
   font-family: 'Montserrat';
-  
+  outline: none;
 }
 
 .nav-links:hover {
   color: whitesmoke;
-  border-bottom: 4px solid #87b0df;
-
+  animation: nav-links 1s linear;
 }
+@-webkit-keyframes nav-links {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes nav-links {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.nav-links {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+} 
 
 .login {
   position: relative;
@@ -144,6 +221,7 @@ footer {
   top: 0px;
 }
 .menu-links {
+  outline: none;
   background: none;
   padding: 8px;
   color: rgb(243, 248, 174);
@@ -185,8 +263,8 @@ footer {
 }
 
 .img {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   /* position: absolute;
   top: -5px; */
   
@@ -195,9 +273,21 @@ footer {
   transform: translateY(-50%);
   letter-spacing: 3px;
   margin-bottom: -10px;
-
+  font-size: 25px;
+  margin-bottom: -20px;
+  color: goldenrod;
+  padding: none;
+  
 }
 .h3 span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate .5s linear forwards;
+}
+.h2 {
+  font-weight: inherit;
+}
+.h2 span {
   opacity: 0;
   display: inline-block;
   animation: animate .5s linear forwards;
@@ -255,37 +345,52 @@ h1 span:nth-child(8) {
 }
 
 
-h3 span:nth-child(1) {
+.h3 span:nth-child(1) {
   animation-delay: .1s;
 }
-h3 span:nth-child(2) {
+.h3 span:nth-child(2) {
   animation-delay: .2s;
 }
-h3 span:nth-child(3) {
+.h3 span:nth-child(3) {
   animation-delay: .3s;
 }
-h3 span:nth-child(4) {
+.h3 span:nth-child(4) {
   animation-delay: .4s;
 }
-h3 span:nth-child(5) {
+.h3 span:nth-child(5) {
   animation-delay: .5s;
 }
-h3 span:nth-child(6) {
+.h3 span:nth-child(6) {
   animation-delay: .6s;
 }
-h3 span:nth-child(7) {
+.h3 span:nth-child(7) {
   animation-delay: .7s;
 }
-h3 span:nth-child(8) {
+.h3 span:nth-child(8) {
   animation-delay: .8s;
 }
-h3 span:nth-child(9) {
+.h3 span:nth-child(9) {
   animation-delay: .9s;
 }
-h3 span:nth-child(10) {
+.h3 span:nth-child(10) {
   animation-delay: 1s;
 }
 
+.h2 span:nth-child(1) {
+  animation-delay: 1s;
+}
+.h2 span:nth-child(2) {
+  animation-delay: 1.25s;
+}
+.h2 span:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.h2 span:nth-child(4) {
+  animation-delay: 1.75s;
+}
+.h2 span:nth-child(5) {
+  animation-delay: 2s;
+}
 @media screen and (max-width: 950px)  {
   .nav-links {
     display: none

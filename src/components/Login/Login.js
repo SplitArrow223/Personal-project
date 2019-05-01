@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import axios from 'axios'
-import styled from 'styled-components'
-import {Button} from '../Button'
-import {withRouter} from 'react-router-dom'
+import axios from 'axios';
+import styled from 'styled-components';
+import {Button} from '../Button';
+import {withRouter} from 'react-router-dom';
+import swal from 'sweetalert';
 
 class Login extends Component {
     constructor(){
@@ -16,16 +17,15 @@ class Login extends Component {
     async register() {
         const {username, email, password } = this.state;
         const res = await axios.post('/auth/register', {username, email, password } );
-        console.log(res)
         if (res.data.loggedIn) this.props.history.push('/private')
-        else alert('registration failed')
+        else swal('Registration Failed!', 'Email Already In Use!', 'warning')
             
     }
     async login() {
         const {username, email, password} = this.state;
         const res = await axios.post('/auth/login', {username, email, password});
         if (res.data.loggedIn) this.props.history.push('/private')
-        else alert('login failed')
+        else swal('Login Failed', 'Incorrect Username, Email Or Password', 'error')
     }
   render() {
     return (

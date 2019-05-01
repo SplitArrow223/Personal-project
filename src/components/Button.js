@@ -12,6 +12,7 @@ import styled from 'styled-components'
    box-shadow: rgb(0, 0, 0) 5px 5px 15px 3px;
   border: 8px outset rgb(28, 110, 164); 
   display: inline-block;
+  outline: none;
   &:hover {
     color: whitesmoke;
     background-color: #163a6399;

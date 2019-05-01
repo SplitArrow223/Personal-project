@@ -7,6 +7,7 @@ import About from './components/About';
 import Icon from './Minion-icon.png';
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -54,7 +55,7 @@ class App extends Component {
                       flexDirection: 'row',
                       alignItems: 'center'
                     }} >
-                    <img className='img' src={Icon} alt="golf-ball" ></img>
+                    <img className='img' src={Icon} alt="minion" ></img>
                     <h3 className='h3' >
                       <span>M</span>
                       <span>i</span>
@@ -73,12 +74,28 @@ class App extends Component {
                         <button className='nav-links' onClick={() => {
                           this.setState({showLogin: !this.state.showLogin,
                           showAbout: false, showWelcome: false})
-                          }} >LOGIN</button>
+                          }} >
+                          <div className='h2'>
+                          <span>L</span>
+                          <span>O</span>
+                          <span>G</span>
+                          <span>I</span>
+                          <span>N</span>
+                          </div>
+                          </button>
 
                         <button className="nav-links" onClick={() => {
                           this.setState({showAbout: !this.state.showAbout,
                           showLogin: false, showWelcome: false})
-                          }} >ABOUT</button>
+                          }} >
+                          <div className='h2'>
+                          <span>A</span>
+                          <span>B</span>
+                          <span>O</span>
+                          <span>U</span>
+                          <span>T</span>
+                          </div>
+                          </button>
                       </div>
                       <div className='nav-icon'
                       onClick={() => this.setState({
@@ -108,7 +125,7 @@ class App extends Component {
                     </div>
                   </div> 
                   <footer>
-                    @ copywright
+                    @ Jason's Golf App
                   </footer>   
                 </div>
 

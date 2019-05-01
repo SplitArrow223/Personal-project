@@ -1,3 +1,4 @@
+
 const bcrypt = require('bcryptjs')
 require('dotenv').config();
 const {REACT_APP_REDIRECT} = process.env;
@@ -33,6 +34,7 @@ module.exports = {
       const result = bcrypt.compareSync(password, accArr[0].users_hash);
       if(!result) {
           return res.status(401).send({message: 'Incorrect password'})
+          
       }
       req.session.user = {
           username: accArr[0].username,

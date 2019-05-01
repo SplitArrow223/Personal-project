@@ -33,23 +33,27 @@
   border: 7px  solid #6d161b
 }
 .icon2 {
-  height: 75px;
+  height: 60px;
   background-color: goldenrod;
   border-radius: 20px;
   margin-right: 10px;
   
 }
+.nav {
+  margin-bottom: -30px
+}
 .nav-links {
-  color: goldenrod
+  color: goldenrod;
+  outline: none;
 }
 .nav-links:hover {
   color: whitesmoke;
-  border-bottom: 4px solid #852929;
+  
   
 }
 
 .btn {
-
+  outline: none;
   background: none;
   border: none;
   font-size: 25px;
@@ -97,6 +101,7 @@
   font-size: 20px;
   border-radius: 6px;
   font-weight: bold;
+  outline: none;
 }
 .logout-btn:hover {
   background-color:#d3e0e0;
@@ -146,6 +151,7 @@
   border: none;
   font-size: 20px;
   text-decoration: underline solid #6d161b;
+  outline: none;
 }
 .menu2-links:hover {
   color: whitesmoke;
@@ -159,6 +165,7 @@
   padding: 10px 40px;
   font-size: 18px;
   font-weight: bold;
+  outline: none;
 }
 .nav-icon2 {
   display: none;
@@ -170,7 +177,7 @@
 .nav-icon2:after, 
 .nav-icon2:before, 
 .nav-icon2 div {
-  background-color: rgb(209, 89, 33);
+  background-color: goldenrod;
   border-radius: 3px;
   content: '';
   display: block;
@@ -195,7 +202,7 @@
 
   }
   .icon2 {
-    height: 60px;
+    height: 50px;
     margin-left: -18px;
   }
   .nav-icon2 {
@@ -210,7 +217,7 @@
     
   }
   .h3 {
-    font-size: 30px
+    font-size: 20px
   }
 
   
