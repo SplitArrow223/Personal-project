@@ -265,9 +265,13 @@ footer {
 .img {
   width: 70px;
   height: 70px;
+  
   /* position: absolute;
   top: -5px; */
   
+}
+.img:hover {
+  animation: icon-spin .15s linear infinite
 }
 .h3 {
   transform: translateY(-50%);
