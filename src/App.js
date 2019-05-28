@@ -120,8 +120,8 @@ class App extends Component {
                     </h1>
                     <div className='welcome-text'>
                     <h2>LETS GET STARTED !</h2>         
-                    <h2>Click the login button located at the top to log in,  </h2>  
-                    <h2>or create a new account!</h2>
+                    <h2>Click the login button located at the top to log in,<br/> or create a new account! </h2>  
+                   
                     </div>
                   </div> 
                   <footer>

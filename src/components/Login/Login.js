@@ -30,13 +30,16 @@ class Login extends Component {
   render() {
     return (
       <Wrapper >
-        <h1 style={{textShadow: '5px 5px 5px rgb(16, 18, 141) ', 
+        <h2 style={{textShadow: '5px 5px 5px rgb(16, 18, 141) ', 
              color: 'darkgray', 
              letterSpacing: '3px',
              position: 'relative',
-             top: '40px'}} >
-         GOLFERS ANONYMOUS  
-        </h1>
+             top: '0px',
+             fontFamily: 'Kaushan Script',
+             fontSize: '40px',
+             margin: '0px'}} >
+         GOLFERS<br/>ANONYMOUS  
+        </h2>
         <Input primary>
           <span>Username:</span>
           <input onChange={(e) => this.setState({ username: e.target.value })}
@@ -62,7 +65,7 @@ class Login extends Component {
           
           <Button  onClick={() => this.register()} padding='15px' >Register</Button>
           
-          <Button onClick={() => this.login().then(this.setState({username: '', email: '', password: ''}))} padding='15px' >Log in</Button>
+          <Button onClick={() => this.login().then(this.setState({ password: ''}))} padding='15px' >Log in</Button>
         </div>
       </Wrapper>
     );
@@ -78,6 +81,7 @@ const Input =  styled.p`
   border-radius: 8px;
   width: 350px;
   padding: 10px;
+  margin: 0px;
   font-size: 20px;
   border: 3px solid rgb(38, 87, 161);
   display: flex;
@@ -104,7 +108,8 @@ const Input =  styled.p`
 `;
 
 const Wrapper = styled.div`
-  width: 500px;
+  width: 40vw;
+  height: 70vh;
   padding-top: 0px;
   background-color: #0f1e1d2e;
   display: flex;

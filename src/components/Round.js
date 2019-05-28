@@ -65,7 +65,7 @@ const Wrapper = styled.div`
     background-color: #a8b6b6;
     background-image: none;
     &:hover {
-      color: whitesmoke;
+      color: #6d161b;
       background-color: #a8b6b6;
       border-color: rgb(6, 48, 6)
     }

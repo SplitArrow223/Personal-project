@@ -108,7 +108,7 @@ const Wrapper = styled.div`
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
     background-color: #153b66ad;
     width: 352px;
     height: 50px;
@@ -120,7 +120,7 @@ const Wrapper = styled.div`
     width: 300px;
     .c-name {
       width: 302px;
-      margin-top: -50px
+      margin-top: -50px;
     }
     button {
       padding: 5px 10px;
@@ -166,7 +166,7 @@ const BackBtn = styled.button`
     top: 2em;
     left: 5px;
     padding: 0px 13px;
-    text-shadow: 2px 2px 3px #163a63;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     outline: none;
     &:hover {
       /* color: rgb(173, 11, 11);

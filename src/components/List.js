@@ -80,7 +80,7 @@ const Display = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 14px ridge #1C6EA4;
+  border: 10px outset #1C6EA4;
   color: #163a63;
   border-radius: 5px;
   
